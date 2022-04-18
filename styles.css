@@ -1,0 +1,207 @@
+body {
+    background-image: url("images/creek.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    }
+    
+    p.textcontent {
+        position: relative;
+        text-align: center;
+        color: white;
+        font-size: 75px;
+        margin: auto;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    section {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 10px;
+      height: 100px;
+      background-color:rgb(136, 255, 112);
+      width: 100%;
+    }
+    
+    .custom-shape-divider-top-1636779432 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    
+    .custom-shape-divider-top-1636779432 svg {
+        position: relative;
+        display: block;
+        width: calc(134% + 1.3px);
+        height: 60px;
+    }
+    
+    .custom-shape-divider-top-1636779432 .shape-fill {
+        fill: rgb(0, 0, 0);
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    
+    
+    li {
+      display: inline;
+      color: #000;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+    
+    li a{
+      display: inline;
+      color: #000;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+        
+    p.textcontent {
+        position: relative;
+        text-align: center;
+        color: white;
+        font-size: 75px;
+        margin: auto;
+        font-family: 'Poppins', sans-serif;
+    }
+
+     /* row column css */
+    /* Container for flexboxes */
+    .row { 
+        position: relative;
+        top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    /* Create four equal columns */
+    .column {
+        position: relative;
+     
+        background-color: hsla(0, 0%, 0%, 0.7);
+        flex: 20%;
+        padding: 10px;
+    }
+    
+
+
+    @media only screen and (max-width:884px) {
+        /* For Phones */
+        div.hideBar {
+          display: none;
+        }
+      
+        div.showBurger {
+          display: block;
+        }
+    
+      
+        /* BURGER MENU STUFF */
+        .topnav {
+          background-color: rgb(0, 0, 0);
+          position: relative;
+          overflow: hidden;
+        }
+      
+        .topnav #myLinks {
+          display: none;
+        }
+      
+        .topnav a {
+          color: white;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+          display: block;
+          font-family: 'Bebas Neue', cursive;
+          font-size: 20px;
+      
+        }
+      
+        .topnav a.icon {
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      
+        .topnav a:hover:not(.active) {
+          background-color: rgb(0, 255, 13);
+          color: rgb(0, 0, 0);
+        }
+      
+        .active {
+          background-color:rgb(0, 0, 0);
+          color: white;
+        }
+      
+        img {
+          display:inline;
+          width: 400px;
+          vertical-align: middle;
+        }
+      
+      }
+      
+      
+      @media only screen and (min-width: 884px) {
+        /* For desktop: */
+      
+        .topnav {
+          background-color:rgb(0, 0, 0);
+          position: relative;
+          overflow: hidden;
+          padding:  14px 16px;
+          text-align: center; 
+        }
+      
+        img {
+          display:inline;
+          width: 400px;
+          vertical-align: middle;
+        }
+      
+        .topnav a {
+          color: white;
+          font-family: 'Bebas Neue', cursive;
+          font-size: 30px;
+          padding-top: 10px;
+        }
+        
+        .topnav a:hover:not(.active) {
+            background-color: rgb(0, 255, 13);
+            color: rgb(0, 0, 0);
+          }
+        
+          .active {
+            background-color:rgb(0, 0, 0);
+            color: white;
+          }
+
+      
+        div.showBurger {
+          display: none;
+        }
+      }
