@@ -1,0 +1,2 @@
+nc -u -l 7777 > newfile.jpg #on the destination machine
+cat file.jpg | nc -u 192.168.x.x 7777 #on the source machine

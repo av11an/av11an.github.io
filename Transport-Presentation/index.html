@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+        <div class="topnav">
+            <p>Layer 4: Transport</p>
+        </div>
+
+        <div style="padding: 30px;">
+            <h1>Description</h1>
+            <p>The transport protocols provide services to their upper layers at well-defined interface points, which are also referred as ports. The IP address and the port are an important combination to set up a transport, connection, or stream.</p>
+            <h1>OSI-Layer-Description</h1>
+            <p>End-To-End connections and reliability</p>
+        </div>
+
+
+        <h1 style="padding:30px;">Protocols</h1>
+        <div class="row">
+            <div class="col-3">
+                <img  style="width: 400px; padding-left: 30px;" src="images/protocol.gif">
+            </div>
+
+            <div style="padding-left: 40px;" class="col-9">
+                <button onclick="protoTCP()">TCP</button>
+                <button onclick="protoUDP()">UDP</button>
+                <button onclick="protoRDP()">RDP</button>
+                <button onclick="protoSCTP()">SCTP</button>
+                <p class="protocols" id="protocols"></p>
+            </div>
+        </div>
+
+    </body>
+    <script>
+        function protoTCP(){
+        var text = document.getElementById("protocols")
+        text.innerHTML = "TCP (Transmission Control Protocol) provides reliable connection-oriented delivery of packets, and is suitable for the session-oriented protocols"
+        }
+
+        function protoUDP(){
+        var text = document.getElementById("protocols")
+        text.innerHTML = "UDP (User Datagram Protocol) is a ``send and forget'' protocol. It provides just enough control information at the start of each packet to tell what application is running, and to check if the packet got distorted on route. UDP is used by applications that have no requirement for an answer, typically, and don't really care if the other end received the message. A typical example of this might be a server that announces the time on the network, unsolicited."
+        }
+
+        function protoRDP(){
+        var text = document.getElementById("protocols")
+        text.innerHTML = "RDP (Remote Desktop Protocol) type protocols are similar to TCP, but with reduced complexity at the start and end of a conversation, and with good support for sequences of exchanges of chunks of data, often known as Remote Procedure Calls, or sometimes incorrectly called transactions."
+        }
+
+        function protoSCTP(){
+        var text = document.getElementById("protocols")
+        text.innerHTML = "SCTP (Stream Control Transmission Protocol) provides more reliability than TCP by better means of flow control, buffering, retransmission, and multiple streams. SCTP finds applicability in the IMS Authentication, Authorization, and Accounting (AAA) protocols and in the border function of the Signaling Gateway (SGW) interfacing to the Public Switched Telephone Network (PSTN)."
+        }
+    </script>
+</html>
