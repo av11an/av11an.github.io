@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">    
+
+</head>
+<body>
+
+    <!-- Desktop Navigation -->
+
+    <div class="hideBar topnav">
+        <ul>
+            <li><a href="https://github.com/av11an">Github Repo</a></li>
+            <li><a href="https://github.com/av11an">About Me</a></li>
+            <li><a href="index.html" style="font-size: 40px;">Evan Ellis</a></li>
+            <li><a href="https://github.com/av11an">Pictures</a></li>
+            <li><a class="active" href="projects.html">Projects</a></li>
+        </ul>
+    </div>
+
+    <!-- Phone Navigation -->
+
+
+    <div class="showBurger">
+        <div class="topnav">
+            <a href="index.html" style="font-size: 30px;">Evan Ellis</a>
+            <div id="myLinks">
+                <a href="https://github.com/av11an">Github Repo</a>
+                <a href="about.html">About Me</a>
+                <a href="https://github.com/av11an">Pictures</a>
+                <a class="active" href="projects.html">Projects</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="clickedBurger()">
+            <i class="fa fa-bars"></i>
+              </a>
+        </div>
+    </div>
+
+    <!-- Navigation End -->
+
+
+    <!--  Content -->
+
+    <!-- Sidebar navagation -->
+
+    <div id="sidenav" class="sidenav">
+        <ul>
+            <li><button onclick="clickedTransport()" id=1 style="background-color:rgb(0, 255, 13);">Transport OSI</button></li>
+            <li><button onclick="clickedSchoolWeb()" id=2>School Website</button></li>
+            <li><button onclick="clickedPAM()" id=3>Pixel Art Maker</button></li>
+            <li><button onclick="clickedCTF()" id=4>picoCTF</button></li>
+            <li><button onclick="clickedDECA()" id=5>DECA</button></li>
+
+        </ul>
+    </div>
+
+    <div class="projectcontent">
+        <h2 id="title">Transport OSI Layer</h2>
+        <p id="text1">the trnjsnfiesfunsfuiu</p>
+        <img id="image1">
+        <img id="image2">
+        <img id="image3">
+    </div>
+
+
+
+</body>
+<script>
+    function clickedBurger() {
+        var x = document.getElementById("myLinks");
+        if(x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
+
+
+
+    function clickedSchoolWeb() {
+       const title = document.getElementById("title");
+       const text1 = document.getElementById("text1");
+       const image1 = document.getElementById("image1");
+       const image2 = document.getElementById("image2");
+       const image3 = document.getElementById("image3");
+
+       
+       for(let n = 1; n < 6; n++){
+           document.getElementById(n).style = "";
+           document.getElementById(n).className = "sidenav";
+       }
+
+       document.getElementById(2).style.background = "rgb(0, 255, 13)";
+
+       title.innerHTML = "School Community Website";
+       text1.innerHTML = "skmifqiosodfiodjfidjsoifjsdjfio";
+    }
+
+
+
+
+    function clickedTransport() {
+       const title = document.getElementById("title");
+       const text1 = document.getElementById("text1");
+       const image1 = document.getElementById("image1");
+       const image2 = document.getElementById("image2");
+       const image3 = document.getElementById("image3");
+
+       for(let n = 1; n < 6; n++){
+           document.getElementById(n).style = "";
+           document.getElementById(n).className = "sidenav";
+       }
+
+       document.getElementById(1).style.background = "rgb(0, 255, 13)";
+
+       title.innerHTML = "Transport OSI Layer";
+       text1.innerHTML = "the trnjsnfiesfunsfuiu";
+    }
+
+
+
+
+    function clickedPAM() {
+       const title = document.getElementById("title");
+       const text1 = document.getElementById("text1");
+       const image1 = document.getElementById("image1");
+       const image2 = document.getElementById("image2");
+       const image3 = document.getElementById("image3");
+       
+         for(let n = 1; n < 6; n++){
+           document.getElementById(n).style = "";
+           document.getElementById(n).className = "sidenav";
+       }
+
+       document.getElementById(3).style.background = "rgb(0, 255, 13)";
+
+       title.innerHTML = "Pixel Art Maker";
+       text1.innerHTML = "bruh man twentytwo";
+    }
+
+
+
+
+    function clickedCTF() {
+       const title = document.getElementById("title");
+       const text1 = document.getElementById("text1");
+       const image1 = document.getElementById("image1");
+       const image2 = document.getElementById("image2");
+       const image3 = document.getElementById("image3");
+       
+       for(let n = 1; n < 6; n++){
+           document.getElementById(n).style = "";
+           document.getElementById(n).className = "sidenav";
+       }
+
+       document.getElementById(4).style.background = "rgb(0, 255, 13)";
+
+       title.innerHTML = "CTF's & picoCTF";
+       text1.innerHTML = "bruh man and super boy";
+    }
+
+
+
+
+    function clickedDECA() {
+       const title = document.getElementById("title");
+       const text1 = document.getElementById("text1");
+       const image1 = document.getElementById("image1");
+       const image2 = document.getElementById("image2");
+       const image3 = document.getElementById("image3");
+
+       
+         for(let n = 1; n < 6; n++){
+           document.getElementById(n).style = "";
+           document.getElementById(n).className = "sidenav";
+       }
+
+       document.getElementById(5).style.background = "rgb(0, 255, 13)";
+
+       title.innerHTML = "DECA";
+       text1.innerHTML = "deca chapter 2022";
+    }
+
+</script>
+</html>
