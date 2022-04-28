@@ -23,7 +23,7 @@
     <div class="hideBar topnav">
         <ul>
             <li><a href="https://github.com/av11an">Github Repo</a></li>
-            <li><a href="https://github.com/av11an">About Me</a></li>
+            <li><a href="about.html">About Me</a></li>
             <li><a href="index.html" style="font-size: 40px;">Evan Ellis</a></li>
             <li><a href="https://github.com/av11an">Pictures</a></li>
             <li><a class="active" href="projects.html">Projects</a></li>
@@ -88,110 +88,55 @@
     }
 
 
+    //content inside each project
+    const title = document.getElementById("title");
+    const text1 = document.getElementById("text1");
+    const image1 = document.getElementById("image1");
+    const image2 = document.getElementById("image2");
+    const image3 = document.getElementById("image3");
 
+
+    //Erase styling then reset all buttons to styled class.
+    function resetStyle() {
+        for(let n = 1; n < 6; n++){
+           document.getElementById(n).style = "";
+           document.getElementById(n).className = "sidenav";
+       }
+    }
 
     function clickedSchoolWeb() {
-       const title = document.getElementById("title");
-       const text1 = document.getElementById("text1");
-       const image1 = document.getElementById("image1");
-       const image2 = document.getElementById("image2");
-       const image3 = document.getElementById("image3");
-
-       
-       for(let n = 1; n < 6; n++){
-           document.getElementById(n).style = "";
-           document.getElementById(n).className = "sidenav";
-       }
-
-       document.getElementById(2).style.background = "rgb(0, 255, 13)";
-
-       title.innerHTML = "School Community Website";
-       text1.innerHTML = "";
+        resetStyle();
+        document.getElementById(2).style.background = "rgb(0, 255, 13)";
+        title.innerHTML = "School Community Website";
+        text1.innerHTML = "";
     }
-
-
-
 
     function clickedTransport() {
-       const title = document.getElementById("title");
-       const text1 = document.getElementById("text1");
-       const image1 = document.getElementById("image1");
-       const image2 = document.getElementById("image2");
-       const image3 = document.getElementById("image3");
-
-       for(let n = 1; n < 6; n++){
-           document.getElementById(n).style = "";
-           document.getElementById(n).className = "sidenav";
-       }
-
-       document.getElementById(1).style.background = "rgb(0, 255, 13)";
-
-       title.innerHTML = "Transport OSI Layer";
-       text1.innerHTML = "";
+        resetStyle();
+        document.getElementById(1).style.background = "rgb(0, 255, 13)";
+        title.innerHTML = "Transport OSI Layer";
+        text1.innerHTML = "";
     }
-
-
-
 
     function clickedPAM() {
-       const title = document.getElementById("title");
-       const text1 = document.getElementById("text1");
-       const image1 = document.getElementById("image1");
-       const image2 = document.getElementById("image2");
-       const image3 = document.getElementById("image3");
-       
-         for(let n = 1; n < 6; n++){
-           document.getElementById(n).style = "";
-           document.getElementById(n).className = "sidenav";
-       }
-
-       document.getElementById(3).style.background = "rgb(0, 255, 13)";
-
-       title.innerHTML = "Pixel Art Maker";
-       text1.innerHTML = "";
+        resetStyle();
+        document.getElementById(3).style.background = "rgb(0, 255, 13)";
+        title.innerHTML = "Pixel Art Maker";
+        text1.innerHTML = "";
     }
-
-
-
 
     function clickedCTF() {
-       const title = document.getElementById("title");
-       const text1 = document.getElementById("text1");
-       const image1 = document.getElementById("image1");
-       const image2 = document.getElementById("image2");
-       const image3 = document.getElementById("image3");
-       
-       for(let n = 1; n < 6; n++){
-           document.getElementById(n).style = "";
-           document.getElementById(n).className = "sidenav";
-       }
-
-       document.getElementById(4).style.background = "rgb(0, 255, 13)";
-
-       title.innerHTML = "CTF's & picoCTF";
-       text1.innerHTML = "";
+        resetStyle();
+        document.getElementById(4).style.background = "rgb(0, 255, 13)";
+        title.innerHTML = "CTF's & picoCTF";
+        text1.innerHTML = "";
     }
 
-
-
-
     function clickedDECA() {
-       const title = document.getElementById("title");
-       const text1 = document.getElementById("text1");
-       const image1 = document.getElementById("image1");
-       const image2 = document.getElementById("image2");
-       const image3 = document.getElementById("image3");
-
-       
-         for(let n = 1; n < 6; n++){
-           document.getElementById(n).style = "";
-           document.getElementById(n).className = "sidenav";
-       }
-
-       document.getElementById(5).style.background = "rgb(0, 255, 13)";
-
-       title.innerHTML = "DECA";
-       text1.innerHTML = "";
+        resetStyle();
+        document.getElementById(5).style.background = "rgb(0, 255, 13)";
+        title.innerHTML = "DECA";
+        text1.innerHTML = "";
     }
 
 </script>
