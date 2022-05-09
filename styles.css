@@ -16,15 +16,25 @@ body {
       font-family: 'Poppins', sans-serif;
       margin-left:25%;
       margin-right: 15%;
+      overflow:scroll;
+      overflow-x:hidden;
       padding:1px 16px;
-      height:1000px;
+      height:800px;
+      background-color: rgb(0, 0, 0);
+      color:white;
+    }
+
+    .projectcontentfiller {
+      margin-left:25%;
+      margin-right: 15%;
+      padding:1px 16px;
+      height:10000000000px;
       background-color: rgb(0, 0, 0);
       color:white;
     }
     
     p.textcontent {
         position: relative;
-        text-align: center;
         color: white;
         font-size: 75px;
         margin: auto;

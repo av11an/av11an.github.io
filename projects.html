@@ -23,9 +23,9 @@
     <div class="hideBar topnav">
         <ul>
             <li><a href="https://github.com/av11an">Github Repo</a></li>
-            <li><a href="about.html">About Me</a></li>
+            <li><a href="https://github.com/av11an/av11an.github.io/tree/main/images">Pictures</a></li>
             <li><a href="index.html" style="font-size: 40px;">Evan Ellis</a></li>
-            <li><a href="https://github.com/av11an">Pictures</a></li>
+            <li><a href="about.html">About Me</a></li>
             <li><a class="active" href="projects.html">Projects</a></li>
         </ul>
     </div>
@@ -39,7 +39,7 @@
             <div id="myLinks">
                 <a href="https://github.com/av11an">Github Repo</a>
                 <a href="about.html">About Me</a>
-                <a href="https://github.com/av11an">Pictures</a>
+                <a href="https://github.com/av11an/av11an.github.io/tree/main/images">Pictures</a>
                 <a class="active" href="projects.html">Projects</a>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="clickedBurger()">
@@ -51,10 +51,7 @@
     <!-- Navigation End -->
 
 
-    <!--  Content -->
-
-    <!-- Sidebar navagation -->
-
+    <!--  Content -->    
     <div id="sidenav" class="sidenav">
         <ul>
             <li><button onclick="clickedTransport()" id=1 style="background-color:rgb(0, 255, 13);">Transport OSI</button></li>
@@ -62,17 +59,25 @@
             <li><button onclick="clickedPAM()" id=3>Pixel Art Maker</button></li>
             <li><button onclick="clickedCTF()" id=4>picoCTF</button></li>
             <li><button onclick="clickedDECA()" id=5>DECA</button></li>
+            <li><button onclick="clicked3d()" id=6>3d Printing</button></li>
 
         </ul>
     </div>
 
     <div class="projectcontent">
         <h2 id="title">Transport OSI Layer</h2>
-        <p id="text1"></p>
-        <img id="image1">
-        <img id="image2">
+        <p id="text1">One project inside of the vocational school Tri-Tech was to present a part of the OSI model, I chose the transport layer. The transport layer is the 4th layer inside of the OSI model, it is responsible for reliably transferring data using different protocols. Some protocols are used to make sure a signal is transfered, other protocols while slower fit pieces of data together in the correct way like a puzzle. 
+        </p>
+        <a id="link" href="Transport-Presentation/index.html">Check out this basic webpage that explains some parts of the Transport Layer!</a>
+        <p></p>
+        <a id="link2"></a>
+        <p id="text2">The images below show the differences between an image being sent using different protocols, the left being TCP and the right UDP. Although using UDP is faster we can see TCP is far more reliable!</p>
+        <img style="padding: 10px; background-color: red;" id="image1" src="Transport-Presentation/duck-tcp.jpg">
+        <img style="padding: 10px; background-color: red;" id="image2" src="Transport-Presentation/duck-udp.jpg">
         <img id="image3">
     </div>
+
+    <div class="projectcontentfiller"></div>
 
 
 
@@ -91,14 +96,30 @@
     //content inside each project
     const title = document.getElementById("title");
     const text1 = document.getElementById("text1");
+    const text2 = document.getElementById("text2")
+    const link = document.getElementById("link");
+    const link2 = document.getElementById("link2");
     const image1 = document.getElementById("image1");
     const image2 = document.getElementById("image2");
     const image3 = document.getElementById("image3");
 
+    const contents = [title, text1, text2, link, link2, image1, image2, image3];
+
 
     //Erase styling then reset all buttons to styled class.
+
+    function resetText(content){
+        content.innerHTML = "";
+        content.src = "";
+        content.href = "";
+        content.style = "";
+    }
+
     function resetStyle() {
-        for(let n = 1; n < 6; n++){
+
+        contents.forEach(resetText)
+
+        for(let n = 1; n < 7; n++){
            document.getElementById(n).style = "";
            document.getElementById(n).className = "sidenav";
        }
@@ -108,36 +129,70 @@
         resetStyle();
         document.getElementById(2).style.background = "rgb(0, 255, 13)";
         title.innerHTML = "School Community Website";
-        text1.innerHTML = "";
+        text1.innerHTML = "As a project to end off my senior year in high school I wanted to make a more modern looking webpage where students can access from their laptops or phones to find the latest information from ASB. This information would include events, pictures, a calendar with events listed, club information, candidates for next years ASB officers and class officers, and more.";
+        text2.innerHTML = "The website would have a hierarchy design to make sure for the student of responsibility of updating posts they can't upload anything without secondary approval. This meant I had to integrate wordpress, a system that allows editors and admins without much coding knowledge. The integration and website are not finished but below is a screenshot of what it looks like now.";
+        image1.src="images/schoolweb.png";
+        image1.style.width="700px";
     }
 
     function clickedTransport() {
         resetStyle();
         document.getElementById(1).style.background = "rgb(0, 255, 13)";
+
         title.innerHTML = "Transport OSI Layer";
-        text1.innerHTML = "";
+        text1.innerHTML = "One project inside of the vocational school Tri-Tech was to present a part of the OSI model, I chose the transport layer. The transport layer is the 4th layer inside of the OSI model, it is responsible for reliably transferring data using different protocols. Some protocols are used to make sure a signal is transfered, other protocols while slower fit pieces of data together in the correct way like a puzzle. ";
+
+        link.innerHTML = "Check out this basic webpage that explains some parts of the Transport Layer!";
+        link.href = "Transport-Presentation/index.html";
+        text2.innerHTML = "The images below show the differences between an image being sent using different protocols, the left being TCP and the right UDP. Although using UDP is faster we can see TCP is far more reliable!";
+
+        image1.src="Transport-Presentation/duck-tcp.jpg"; image1.style.padding = "10px"; image1.style.background = "red";
+        image2.src="Transport-Presentation/duck-udp.jpg"; image2.style.padding = "10px"; image2.style.background = "red";
     }
 
     function clickedPAM() {
         resetStyle();
         document.getElementById(3).style.background = "rgb(0, 255, 13)";
         title.innerHTML = "Pixel Art Maker";
-        text1.innerHTML = "";
+        text1.innerHTML = "The pixel-art-maker or PAM is an interface that that analyizes images and converts them into a script that creates a pixel art in Minecraft PI edition. This program made me learn object oriented programming with python, more about manipulating text files, saving binary files, and RGB approxomating.";
+        text2.innerHTML = "You can clone the latest version to try it out through my github repo, or you can try out the asciimaker that turns an image into a ascii text file (Uses the same code but without the Minecraft prgramming).";
+        image1.src = "images/loadpam.png"; image1.style.width = "200px"
+        image2.src = "images/savepam.png"; image2.style.width = "200px"
+        image3.src = "images/textfrog.png"; image3.style.width = "600px"
     }
 
     function clickedCTF() {
         resetStyle();
         document.getElementById(4).style.background = "rgb(0, 255, 13)";
         title.innerHTML = "CTF's & picoCTF";
-        text1.innerHTML = "";
+        text1.innerHTML = "I competed in the 2022 picoCTF challenge and made writeups for some problems as a project for Tri-Tech. I also made some of my own CTF's. Both of these are available on my github repo.";
+        link.innerHTML = "Check out this link for an explanation of what CTF's are."; link.href = "https://dev.to/atan/what-is-ctf-and-how-to-get-started-3f04";
+        link2.innerHTML = "Link to my picoCTF profile."; link2.href = "https://play.picoctf.org/users/avian";
+        image1.src = "images/savetheworld.jpeg"; image1.style.width = "400px"
+        image2.src = "images/duck0.png"; image2.style.width = "400px"
     }
 
     function clickedDECA() {
         resetStyle();
         document.getElementById(5).style.background = "rgb(0, 255, 13)";
         title.innerHTML = "DECA";
-        text1.innerHTML = "";
+        text1.innerHTML = "DECA is a international high school & collegiate marketing club that prepares emerging leaders through the 4 c’s. Competition, conferences, class, and community service.";
+        text2.innerHTML = "I have been in DECA for all 4 years of my high school adventure being the the Director of SBE and Finance for CHS DECA for 2 years and 1 year as CHS DECA Chapter President. I have learned a great number of skills like, how to build and manage a team of people, public speaking, project management, marketing strategies, social-media marketing, and professional etiquette. I have been recognized as Washington state’s DECA member of the year for 2022 and I have received smaller awards for competition.";
+        image1.src = "images/DECAINT.png"; image1.style.width = "400px"
+        image2.src = "images/awards.png"; image2.style.width = "400px"
     }
+
+    function clicked3d() {
+        resetStyle();
+        document.getElementById(6).style.background = "rgb(0, 255, 13)";
+        title.innerHTML = "3d Printing";
+        text1.innerHTML = "I use an Ender-Pro 3 with a variety of upgrades. Check out my github repo for all of the stl files I have printed. ";
+        link.href = "upgrades.html"; link.innerHTML = "Link to all the parts I bought to upgrade the printer.";
+        image1.src = "images/printer.png"; image1.style.width = "300px"
+        image2.src = "images/usbpot.png"; image2.style.width = "300px"
+        image3.src = "images/keycap.png"; image3.style.width = "300px"
+    }
+    
 
 </script>
 </html>
